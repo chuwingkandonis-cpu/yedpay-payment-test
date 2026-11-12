@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 14% 5%;
+    --foreground: 150 12% 92%;
+    --card: 160 12% 7%;
+    --card-foreground: 150 12% 92%;
+    --popover: 160 12% 7%;
+    --popover-foreground: 150 12% 92%;
+    --primary: 158 64% 52%;
+    --primary-foreground: 160 30% 6%;
+    --secondary: 160 8% 12%;
+    --secondary-foreground: 150 12% 92%;
+    --muted: 160 8% 12%;
+    --muted-foreground: 150 6% 55%;
+    --accent: 160 10% 14%;
+    --accent-foreground: 150 12% 92%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 160 8% 15%;
+    --input: 160 8% 18%;
+    --ring: 158 64% 52%;
+    --radius: 0.5rem;
+    --sidebar-background: 160 14% 4%;
+    --sidebar-foreground: 150 12% 92%;
+    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary-foreground: 160 30% 6%;
+    --sidebar-accent: 160 10% 12%;
+    --sidebar-accent-foreground: 150 12% 92%;
+    --sidebar-border: 160 8% 13%;
+    --sidebar-ring: 158 64% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Space Grotesk", "PingFang HK", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  }
+  .font-mono,
+  code,
+  pre {
+    font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+}
+
+/* Slim scrollbars to match the console aesthetic */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: hsl(160 8% 20%);
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
